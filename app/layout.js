@@ -1,5 +1,5 @@
 import localFont from "next/font/local";
-import Link from "next/link";
+import CustomLink from "./components/CustomLink";
 import "./globals.css";
 
 const geistSans = localFont({
@@ -22,22 +22,13 @@ export default function RootLayout({ children }) {
         <nav>
           <ul className="flex space-x-4 p-4 bg-gray-100">
             <li>
-              <Link href="/" className="text-gray-700 hover:text-gray-900">
-                Home
-              </Link>
+              <CustomLink path="/">Home</CustomLink>
             </li>
             <li>
-              <Link href="/about" className="text-gray-700 hover:text-gray-900">
-                About
-              </Link>
+              <CustomLink path="/about">About</CustomLink>
             </li>
             <li>
-              <Link
-                href="/contact"
-                className="text-gray-700 hover:text-gray-900"
-              >
-                Contact
-              </Link>
+              <CustomLink path="/contact">Contact</CustomLink>
             </li>
           </ul>
         </nav>
